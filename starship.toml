@@ -1,0 +1,26 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+format = '[\[$directory$git_branch$git_status\]$character](green)'
+
+[character]
+success_symbol = '[\$](bold green)'
+error_symbol = '[\$](bold red)'
+
+[package]
+disabled = true
+
+[directory]
+format = "[$path](style)[$read_only](read_only_style)"
+style = "green"
+read_only_style = "red"
+
+[time]
+format = "[$time]($style)"
+disabled = false
+
+[git_branch]
+format = "[ git:$branch]($style)"
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style))'

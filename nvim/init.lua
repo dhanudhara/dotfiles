@@ -71,6 +71,10 @@ vim.g.mkdp_auto_start = 1
 vim.g.mkdp_browser = 'firefox'
 vim.g.mkdp_log_level = 'debug'
 
+-- Set NERDTree to open in right side
+vim.g.NERDTreeWinPos = 'right'
+vim.opt.splitright = true
+
 
 -- Start NERDTree on startup
 vim.api.nvim_create_autocmd("VimEnter", {
@@ -151,19 +155,39 @@ require('lazy').setup({
     end
   },
 
-  -- markdown preview
+  -- adding hover information
   {
-    "toppair/peek.nvim",
-    event = { "VeryLazy" },
-    build = "deno task --quiet build:fast",
+    "lewis6991/hover.nvim",
     config = function()
-      require("peek").setup({
-        app = 'firefox',
-      })
-      vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
-      vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
+      require("hover").setup {
+        init = function()
+          require("hover.providers.lsp") -- Enable LSP provider
+        end,
+        preview_opts = {
+          border = 'single',
+        },
+        title = true,
+        mouse_providers = { 'LSP' }, -- Enable LSP for mouse hover
+        mouse_delay = 1000, -- Delay for mouse hover
+      }
+
+      -- Key mapping for <leader>k
+      vim.keymap.set("n", "<leader>k", require("hover").hover, { desc = "Show hover information" })
+
+      -- Mouse support for hover
+      vim.api.nvim_set_option('mousemoveevent', true)
+      vim.keymap.set('n', '<MouseMove>', require('hover').hover_mouse, { desc = "Show hover on mouse move" })
     end,
   },
+
+  -- confirm style
+  {
+    'stevearc/conform.nvim',
+    config = function()
+      require('conform').setup()
+    end
+  },
+
   -- markdown prettifier
   'MunifTanjim/prettier.nvim',
 

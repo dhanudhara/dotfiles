@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+pkill bemenu || bemenu-run --hp 8  -H 24 -i --fn InterNerdFont 14 --hb '#2e3440' --tf '#d8dee9'  --nf '#d8dee9' --af '#d8dee9' --hf '#d8dee9' 

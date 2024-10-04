@@ -79,7 +79,7 @@ assign [app_id="whatsapp-for-linux"] 4
 assign [class="Session"] 4
 
 assign [app_id="thunderbird"] 5
-for_window [title="Write: "] floating enable
+for_window [app_id="thunderbird" title="Write: .*"] floating enable
 
 assign [class="Logseq"] 6
 

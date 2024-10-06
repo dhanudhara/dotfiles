@@ -33,10 +33,8 @@ output * bg /home/dhanut/.local/share/themes/wallpaper/wallpaper-03.jpg fill
 # output eDP-1 resolution 1366x768 position 2560,0 scale 0.67
 # output HDMI-A-1 resolution 1600x900 position 0,0 scale 0.625
 
-output eDP-1 mode 1920x1080@60Hz 
-# scale 0.8
-output HDMI-A-1 position 0,0 mode 1600x900@60Hz
-# scale 0.8255 
+output eDP-1 mode 1920x1080@60Hz scale 0.8
+output HDMI-A-1 position 0,0 mode 1600x900@60Hz scale 0.8255 
 # output HDMI-A-1 disable
 
 output * scale_filter linear subpixel rgb max_render_time 16 render_bit_depth 10 adaptive_sync on
@@ -75,7 +73,7 @@ assign [class="jetbrains-studio"] 3
 
 assign [class="Signal"] 4
 assign [class="Element"] 4
-assign [app_id="whatsapp-for-linux"] 4
+assign [app_id="com.ktechpit.whatsie"] 4
 assign [class="Session"] 4
 
 assign [app_id="thunderbird"] 5
@@ -291,8 +289,8 @@ default_border pixel 2
 default_floating_border pixel 2
 
 # Window gaps
-gaps inner 5
-gaps outer 2
+gaps inner 4
+gaps outer 4
 
 #
 # Status Bar:

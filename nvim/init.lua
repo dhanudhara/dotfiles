@@ -180,11 +180,27 @@ require('lazy').setup({
     end,
   },
 
-  -- confirm style
   {
+    -- setting up linters
     'stevearc/conform.nvim',
     config = function()
-      require('conform').setup()
+      require('conform').setup({
+        formatters_by_ft = {
+          css = { "prettier" },
+          java = { "google-java-format" },
+          json = { "prettier" },
+          kotlin = { "ktlint" },
+          lua = { "ast-grep" },
+          python = { "autopep8" },
+          sh = { "shfmt" },
+          typescript = { "ts-standard" },
+        },
+        format_on_save = {
+          lsp_format = "fallback",
+          async = false,
+          timeout_ms = 3000,
+        },
+      })
     end
   },
 
@@ -205,7 +221,8 @@ require('lazy').setup({
   },
 
   -- java
-  {'nvim-java/nvim-java'},
+  -- {'nvim-java/nvim-java'},
+  {'mfussenegger/nvim-jdtls'},
 
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
@@ -640,7 +657,7 @@ require('which-key').setup {
 -- before setting up the servers.
 require('mason').setup()
 require('mason-lspconfig').setup()
-require('java').setup()
+-- require('java').setup()
 require('lspconfig').jdtls.setup({})
 
 -- Enable the following language servers

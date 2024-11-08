@@ -224,6 +224,24 @@ require('lazy').setup({
   -- {'nvim-java/nvim-java'},
   {'mfussenegger/nvim-jdtls'},
 
+  {
+    -- code snippets screenshot
+    "ellisonleao/carbon-now.nvim",
+    lazy = true,
+    cmd = "CarbonNow",
+    opts = {
+      options = {
+        titlebar = "",
+        watermark = false,
+        theme = "one-light",
+        font_size = "12px",
+        width = "840",
+        wc = true,
+      }
+    },
+    ---@param opts cn.ConfigSchema
+  },
+
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
   {

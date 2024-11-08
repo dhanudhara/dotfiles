@@ -7,7 +7,7 @@ export XDG_CACHE_HOME="$HOME/.local/share"
 # Other env variables
 export HISTFILE="${XDG_STATE_HOME}"/bash/history
 export CALCHISTFILE="$XDG_CACHE_HOME"/calc_history
-export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker  
+export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrcERRFILE="$XDG_CACHE_HOME/X11/xsession-errors"
 ERRFILE="$XDG_CACHE_HOME/X11/xsession-errors"
@@ -60,3 +60,6 @@ export WLR_DRM_NO_ATOMIC="1"
 export _JAVA_AWT_WM_NONREPARENTING="1"
 export SDL_VIDEODRIVER="wayland"
 export CLUTTER_BACKEND="wayland"
+
+# DBUS
+export $(dbus-launch)

@@ -51,9 +51,9 @@ workspace 5 output eDP-1
 workspace 9 output eDP-1
 workspace 10 output eDP-1
 
-# Auto start applications
+# Startup applications
 exec {
-    nice -n13 ionice -c3 foot -s & # Starts foot server
+    nice -n3 ionice -c3 foot -s & # Starts foot server
     nice -n13 ionice -c3 swaync &
     nice -n13 ionice -c3 nm-applet &
     nice -n13 ionice -c3 avizo-service &
@@ -141,9 +141,9 @@ input "type:touchpad" {
     bindsym $mod+Shift+d exec nwggrid
 
     # Launch my applications
-    bindsym $mod+f exec firefox -p
+    bindsym $mod+f exec nice -n 3 firefox -p
     bindsym $mod+e exec pcmanfm
-    bindsym $mod+t exec android-studio
+    bindsym $mod+t exec nice -n 5 android-studio
     bindsym $mod+n exec swaync-client -t
     bindsym $mod+n+c exec swaync-client -C
 

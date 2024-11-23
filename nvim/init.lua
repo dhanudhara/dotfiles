@@ -191,6 +191,7 @@ require('lazy').setup({
           json = { "prettier" },
           kotlin = { "ktlint" },
           lua = { "ast-grep" },
+          markdown = { "markdownlint" },
           python = { "autopep8" },
           sh = { "shfmt" },
           typescript = { "ts-standard" },

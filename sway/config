@@ -20,24 +20,25 @@ set $term foot -s || footclient
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 # set $menu pkill bemenu || bemenu-run --hp 8  -H 24 -i --fn FiraCodeNerd 14
-set $menu $HOME/.scripts/bemenu-fancy
+# set $menu $HOME/.scripts/bemenu-fancy
+set $menu wofi
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /run/current-system/sw/share/backgrounds/sway/)
-output * bg /home/dhanut/.local/share/themes/wallpaper/wallpaper-03.jpg fill
+output * bg /home/dhanut/.local/share/themes/wallpaper/wallpaper-01.jpg fill
 #
-# Example configuration:
-#
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
-# output eDP-1 resolution 1366x768 position 2560,0 scale 0.67
-# output HDMI-A-1 resolution 1600x900 position 0,0 scale 0.625
-
 output eDP-1 mode 1920x1080@60Hz scale 0.8
 output HDMI-A-1 position 0,0 mode 1600x900@60Hz scale 0.9 
 # output HDMI-A-1 disable
 
-output * scale_filter linear subpixel rgb max_render_time 16 render_bit_depth 10 adaptive_sync on
+output * {
+    scale_filter linear 
+    subpixel rgb
+    max_render_time 16
+    render_bit_depth 10
+    adaptive_sync on
+}
 
 workspace 1 output HDMI-A-1
 workspace 2 output HDMI-A-1
@@ -53,15 +54,16 @@ workspace 10 output eDP-1
 
 # Startup applications
 exec {
+    soteria &
     nice -n3 ionice -c3 foot -s & # Starts foot server
-    nice -n13 ionice -c3 swaync &
+    nice -n13 ionice -c3 mako --icons 1 --ignore-timeout 1 --padding 16 &
     nice -n13 ionice -c3 nm-applet &
     nice -n13 ionice -c3 avizo-service &
     nice -n13 ionice -c3 gnome-pomodoro &
     nice -n13 ionice -c3 thunderbird &
     nice -n13 ionice -c3 $HOME/.scripts/docker-events & # To monitor docker events
     nice -n13 ionice -c3 wl-gammactl -c 0.900 -b 0.960 -g 0.970 &
-    swayidle -w timeout 300 'hyprlock' &
+    swayidle -w timeout 300 'swaylock --image .local/share/themes/wallpaper/wallpaper-01.jpg' &
     autotiling-rs &
 }
 
@@ -88,6 +90,7 @@ assign [app_id="gnome-pomodoro"] focus
 # Focus
 focus_on_window_activation focus
 focus_follows_mouse always
+mouse_warping container
 
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
@@ -133,7 +136,7 @@ input "1:1:AT_Translated_Set_2_keyboard" {
     # Start a terminal
     bindsym $mod+Return exec $term
 
-    # Kill focused window
+    # Kill focused windo6
     bindsym $mod+q kill
 
     # Start your launcher
@@ -144,8 +147,8 @@ input "1:1:AT_Translated_Set_2_keyboard" {
     bindsym $mod+f exec nice -n 3 firefox -p
     bindsym $mod+e exec pcmanfm
     bindsym $mod+t exec open-android-studio
-    bindsym $mod+n exec swaync-client -t
-    bindsym $mod+n+c exec swaync-client -C
+    # bindsym $mod+n exec swaync-client -t
+    # bindsym $mod+n+c exec swaync-client -C
 
 
     bindsym {
@@ -171,7 +174,8 @@ input "1:1:AT_Translated_Set_2_keyboard" {
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    # bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+e exec shutdown now
 #
 # Moving around:
 #
@@ -292,12 +296,14 @@ default_border pixel 2
 default_floating_border pixel 2
 
 # Window gaps
-gaps inner 4
-gaps outer 4
+gaps {
+    inner 6
+    outer 4
+}
 
 # !! only works with swayfx
-corner_radius 8
-layer_effects "waybar" blur enable; shadows enable; corner_radius 6
+# corner_radius 8
+# layer_effects "waybar" blur enable; shadows enable; corner_radius 6
 
 #
 # Status Bar:

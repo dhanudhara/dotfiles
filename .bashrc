@@ -1,6 +1,7 @@
 # Aliases
 alias ls='lsd -F'
 alias la="lsd -a1"
+alias li="yazi"
 alias rm='rm -I'
 alias vi='nvim'
 alias super-productivity='env -u WAYLAND_DISPLAY super-productivity'

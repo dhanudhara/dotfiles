@@ -6,7 +6,7 @@ alias rm='rm -I'
 alias vi='nvim'
 alias super-productivity='env -u WAYLAND_DISPLAY super-productivity'
 alias brave='env -u WAYLAND_DISPLAY brave'
-alias logseq='env -u WAYLAND_DISPLAY logseq'
+alias cat='bat'
 
 source ~/.exports.sh
 

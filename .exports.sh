@@ -22,7 +22,7 @@ export XCOMPOSECACHE="${XDG_CACHE_HOME}"/X11/xcompose
 export STARSHIP_CACHE=~/.starship/cache
 
 # FZF Color scheme
-export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS' --color=fg:#848d97,bg:#30363d,hl:#ffffff --color=fg+:#e6edf3,bg+:#313f50,hl+:#ffa657 --color=info:#d29922,prompt:#2f81f7,pointer:#a371f7 --color=marker:#3fb950,spinner:#6e7681,header:#495058'
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS' --color bw'
 
 # Exporting paths
 export PATH="/opt/anaconda/bin:$PATH"
@@ -51,7 +51,7 @@ export BROWSER="firefox"
 export XDG_SESSION_TYPE="wayland"
 export XDG_CURRENT_DESKTOP="sway"
 export XDG_SESSION_DESKTOP="sway"
-export QT_QPA_PLATFORMTHEME="qt5ct"
+# export QT_QPA_PLATFORMTHEME="qt5ct"
 export QT_QPA_PLATFORM="wayland"
 export MOZ_ENABLE_WAYLAND="1"
 export GDK_BACKEND="wayland"
@@ -63,3 +63,6 @@ export CLUTTER_BACKEND="wayland"
 
 # DBUS
 export $(dbus-launch)
+
+# bat as manpager
+export MANPAGER="nvim +Man!"

@@ -1,7 +1,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
+format = '''[\[$directory$git_branch$git_status$cmd_duration\]$character](green)'''
 add_newline = false
-format = '[\[$directory$git_branch$git_status\]$character](green)'
 
 [character]
 success_symbol = '[\$](bold green)'
@@ -24,3 +24,9 @@ format = "[ git:$branch]($style)"
 
 [git_status]
 format = '([\[$all_status$ahead_behind\]]($style))'
+
+[cmd_duration]
+format = "[ $duration]($style)"
+min_time = 100
+show_notifications = true
+min_time_to_notify = 3_600_000

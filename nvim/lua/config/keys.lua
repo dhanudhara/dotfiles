@@ -1,0 +1,4 @@
+--[
+-- check the current file type: if filetype:match(".nix")
+-- key is <leader>ft command '%!nixfmt'
+--]

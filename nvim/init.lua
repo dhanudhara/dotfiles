@@ -35,8 +35,3 @@ vim.o.guifont = "FiraCode Nerd Font:h12"
 -- Android development paths
 -- vim.g.gradle_path = ""
 vim.g.android_sdk_path = "/home/dhanut/Android/Sdk"
-
--- LSP
-local lspconfig_defaults = require("lspconfig").util.default_config
-lspconfig_defaults.capabilities =
-	vim.tbl_deep_extend("force", lspconfig_defaults.capabilities, require("blink.cmp").get_lsp_capabilities())

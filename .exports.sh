@@ -32,7 +32,7 @@ export LIBRARY_PATH=/usr/lib:$LIBRARY_PATH
 
 # Exporting android paths
 export ANDROID_HOME="$HOME/Android/Sdk"
-#export ANDROID_SDK_ROOT="$HOME/Android/Sdk/platform-tools/34.0.0"
+# export ANDROID_SDK_ROOT="$HOME/Android/Sdk/platform-tools/34.0.0"
 export ANDROID_NDK_ROOT="$HOME/Android/Sdk/ndk/26.1.10909125"
 export PATH="$HOME/Android/tools:$PATH"
 export PATH="$HOME/Android/platform-tools:$PATH"
@@ -49,9 +49,10 @@ export BROWSER="firefox"
 
 # Variables from Hyprland
 export XDG_SESSION_TYPE="wayland"
-export XDG_CURRENT_DESKTOP="sway"
-export XDG_SESSION_DESKTOP="sway"
+export XDG_CURRENT_DESKTOP="river"
+export XDG_SESSION_DESKTOP="river"
 # export QT_QPA_PLATFORMTHEME="qt5ct"
+export QT_QPA_PLATFORMTHEME="gtk3"
 export QT_QPA_PLATFORM="wayland"
 export MOZ_ENABLE_WAYLAND="1"
 export GDK_BACKEND="wayland"
@@ -63,6 +64,3 @@ export CLUTTER_BACKEND="wayland"
 
 # DBUS
 export $(dbus-launch)
-
-# bat as manpager
-export MANPAGER="nvim +Man!"

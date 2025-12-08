@@ -1,7 +1,8 @@
 # Aliases
-alias ls='lsd -F'
-alias la="lsd -a1"
-alias lf="joshuto"
+alias ls='ls --color'
+# alias la="lsd -a1"
+alias yz="yazi"
+alias suspend='systemctl suspend'
 alias rm='rm -I'
 alias vi='nvim'
 alias nvi='neovide'
@@ -14,11 +15,7 @@ alias feh='oculante'
 source ~/.exports.sh
 
 # Initialising starship
-# eval "$(starship init bash)"
-if [ -f "/home/dhanut/.config/fabric/fabric-bootstrap.inc" ]; then . "/home/dhanut/.config/fabric/fabric-bootstrap.inc"; fi
+eval "$(starship init bash)"
 
 # Adding fzf keybindings and fuzzy completion
 eval "$(fzf --bash)"
-
-# Zoxide Init
-# eval "$(zoxide init bash)"

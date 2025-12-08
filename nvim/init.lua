@@ -30,8 +30,9 @@ local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find Files" })
 vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Find Buffers" })
 
-vim.o.guifont = "FiraCode Nerd Font:h12"
+-- Theme
+vim.cmd [[colorscheme alabaster]]
+vim.o.guifont = "JetBrainsMono Nerd Font:h12"
 
 -- Android development paths
--- vim.g.gradle_path = ""
 vim.g.android_sdk_path = "/home/dhanut/Android/Sdk"

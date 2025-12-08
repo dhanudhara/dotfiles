@@ -1,7 +1,7 @@
 return {
-    'windwp/nvim-autopairs',
-    event = "InsertEnter",
-    config = true,
-    -- use opts = {} for passing setup options
-    opts = {}
+	"windwp/nvim-autopairs",
+	event = "InsertEnter",
+	config = true,
+	-- use opts = {} for passing setup options
+	opts = {},
 }

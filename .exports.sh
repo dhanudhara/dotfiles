@@ -28,6 +28,7 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS' --color bw'
 export PATH="/opt/anaconda/bin:$PATH"
 export PATH="~/.local/bin:$PATH"
 export PATH="~/.cargo/bin:$PATH"
+export PATH="~/.local/share/gem/ruby/3.4.0/bin:$PATH"
 export LIBRARY_PATH=/usr/lib:$LIBRARY_PATH
 
 # Exporting android paths

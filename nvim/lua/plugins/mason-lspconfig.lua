@@ -7,7 +7,6 @@ return {
             "kotlin-lsp",
             "pyflakes",
             "python-lsp-server",
-            "uv",
             "zls",
         },
     },

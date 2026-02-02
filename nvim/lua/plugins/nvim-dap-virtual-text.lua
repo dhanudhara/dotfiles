@@ -1,0 +1,8 @@
+return {
+    "theHamsta/nvim-dap-virtual-text",
+    dependencies = { "mfussenegger/nvim-dap", "nvim-treesitter/nvim-treesitter" },
+    opts = {
+        enabled = true,
+        enabled_commands = true,
+    },
+}

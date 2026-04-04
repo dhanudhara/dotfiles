@@ -11,7 +11,8 @@
     .startup_cmds = .{
         // .{ "swaybg", "-i", "/path/to/wallpaper" },
         .{ "wbg", "-s", "/home/dhanut/.local/share/wallpaper/wallpaper-01.jpg" },
-        .{ "/home/dhanut/.scripts/kwm-status" }
+        .{ "/home/dhanut/.scripts/kwm-status" },
+        .{ "thunderbird" },
     },
 
     // .none

@@ -65,3 +65,6 @@ export CLUTTER_BACKEND="wayland"
 
 # DBUS
 export $(dbus-launch)
+
+
+export MANPAGER='bat -p -l man'

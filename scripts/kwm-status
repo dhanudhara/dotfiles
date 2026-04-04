@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+[ -p $HOME/.scripts/status-fifo ] || mkfifo $HOME/.scripts/status-fifo
+
+while true; do
+    seconds=$(date +'%S')
+    
+    if [ "$seconds" -lt 30 ]; then
+        sleep $((30 - seconds))s
+    else
+        sleep $((60 - seconds))s
+    fi
+    
+    printf "%s\r" $(date +'%F %H:%M') > $HOME/.scripts/status-fifo
+    
+    sleep 30s
+done

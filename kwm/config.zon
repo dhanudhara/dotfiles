@@ -1012,6 +1012,7 @@
     //      attach_mode: like `default_attach_mode`, change attach_mode for window matched
     .window_rules = .{
         .{ .app_id = .{ .str = "firefox" }, .tag = 0b10 },
+        .{ .app_id = .{ .str = "org.mozilla.Thunderbird" }, .tag = 0b10000 },
         .{ .app_id = .{ .str = "foot" }, .is_terminal = true, .scroller_mfact = 0.8 },
     },
 

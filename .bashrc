@@ -10,7 +10,10 @@ alias super-productivity='env -u WAYLAND_DISPLAY super-productivity'
 alias brave='env -u WAYLAND_DISPLAY brave'
 # alias cat='bat'
 alias trackma='trackma-gtk'
-alias feh='oculante'
+alias zt='zathura'
+alias signal-desktop='signal-desktop --ozone-platform=x11'
+alias topgrade='topgrade -y -t'
+alias bat='bat -p'
 
 source ~/.exports.sh
 

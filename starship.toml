@@ -28,5 +28,5 @@ format = '([\[$all_status$ahead_behind\]]($style))'
 [cmd_duration]
 format = "[ $duration]($style)"
 min_time = 100
-show_notifications = true
-min_time_to_notify = 3_600_000
+# show_notifications = true
+# min_time_to_notify = 3_600_000

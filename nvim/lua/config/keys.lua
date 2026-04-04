@@ -11,4 +11,7 @@ end
 
 return {
   vim.keymap.set('n', '<Leader>dt', toggle_diagnostics, { desc = "Toggle diagnostics" }),
+  vim.keymap.set('n', '<leader>ab', ':term ./gradlew build<CR>', { desc = "Gradle Build" }),
+  vim.keymap.set('n', '<leader>ai', ':term ./gradlew installDebug<CR>', { desc = "Install Debug" }),
+  vim.keymap.set('n', '<leader>x', ':Compile', { desc = "Compile Program" }),
 }

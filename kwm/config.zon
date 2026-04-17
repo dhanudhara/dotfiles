@@ -13,6 +13,7 @@
         .{ "wbg", "-s", "/home/dhanut/.local/share/wallpaper/wallpaper-01.jpg" },
         .{ "/home/dhanut/.scripts/kwm-status" },
         .{ "thunderbird" },
+        .{ "mako" },
     },
 
     // .none

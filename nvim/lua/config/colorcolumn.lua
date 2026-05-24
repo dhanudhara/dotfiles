@@ -1,0 +1,1 @@
+vim.colorcolumn=79

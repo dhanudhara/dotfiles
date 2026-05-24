@@ -3,7 +3,7 @@ vim.wo.number = true
 vim.wo.relativenumber = true
 vim.opt.wrap = true
 vim.opt.smartcase = true
-vim.colorcolumn = 80
+vim.opt.colorcolumn = "79"
 
 --  Indentation
 vim.opt.smartindent = true
@@ -31,7 +31,7 @@ vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find Files" })
 vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Find Buffers" })
 
 -- Theme
-vim.cmd [[colorscheme alabaster]]
+vim.cmd[[colorscheme seafoam]]
 vim.o.guifont = "JetBrainsMono Nerd Font:h12"
 
 -- Android development paths

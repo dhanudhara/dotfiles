@@ -14,4 +14,7 @@ return {
   vim.keymap.set('n', '<leader>ab', ':term ./gradlew build<CR>', { desc = "Gradle Build" }),
   vim.keymap.set('n', '<leader>ai', ':term ./gradlew installDebug<CR>', { desc = "Install Debug" }),
   vim.keymap.set('n', '<leader>x', ':Compile', { desc = "Compile Program" }),
+  vim.keymap.set ('n', '<leader>dn', ':lua require(\'dap-python\').debug_selection()<CR>', { desc = "DAP test method"} ),
+  -- vim.keymap.set <leader>df :lua require('dap-python').test_class()<CR>,
+  -- vim.keymap.set <leader>ds <ESC>:lua require('dap-python').debug_selection()<CR>,
 }

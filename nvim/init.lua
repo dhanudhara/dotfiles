@@ -3,7 +3,7 @@ vim.wo.number = true
 vim.wo.relativenumber = true
 vim.opt.wrap = true
 vim.opt.smartcase = true
-vim.opt.colorcolumn = "79"
+vim.opt.colorcolumn = "80"
 
 --  Indentation
 vim.opt.smartindent = true

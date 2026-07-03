@@ -10,7 +10,6 @@ export CALCHISTFILE="$XDG_CACHE_HOME"/calc_history
 export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrcERRFILE="$XDG_CACHE_HOME/X11/xsession-errors"
-ERRFILE="$XDG_CACHE_HOME/X11/xsession-errors"
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 export PYTHONSTARTUP="${XDG_CONFIG_HOME}/python/pythonrc"
 export IPYTHONDIR="${XDG_CONFIG_HOME}/ipython"
@@ -50,8 +49,8 @@ export BROWSER="firefox"
 
 # Variables from Hyprland
 export XDG_SESSION_TYPE="wayland"
-export XDG_CURRENT_DESKTOP="river"
-export XDG_SESSION_DESKTOP="river"
+# export XDG_CURRENT_DESKTOP="river"
+# export XDG_SESSION_DESKTOP="river"
 # export QT_QPA_PLATFORMTHEME="qt5ct"
 export QT_QPA_PLATFORMTHEME="gtk3"
 export QT_QPA_PLATFORM="wayland"

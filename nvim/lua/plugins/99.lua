@@ -15,6 +15,10 @@ return {
             },
             tmp_dir = "./tmp",
 
+            provider_extra_args = {
+                "--auto",
+            },
+
             --- Completions: #rules and @files in the prompt buffer
             completion = {
                 custom_rules = {

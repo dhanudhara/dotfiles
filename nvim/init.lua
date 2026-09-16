@@ -2,6 +2,7 @@
 vim.wo.number = true
 vim.wo.relativenumber = true
 vim.opt.wrap = true
+vim.opt.linebreak = true
 vim.opt.smartcase = true
 vim.opt.colorcolumn = "81"
 
